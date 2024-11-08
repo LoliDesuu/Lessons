@@ -1,13 +1,18 @@
-#1st program
-print(9 ** 0.5 * 5)
+#Список:
+grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
+#Множество:
+students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
 
-#2st program
-print(9.99 > 9.98 and 1000.1 != 1000)
-
-#3st program
-print(2 * 2 + 2)
-print(2 * (2 + 2))
-print(2 * 2 + 2 == 2 * (2 + 2))
-
-#4st program
-print(int((float('123.456')) * 10) % 10)
+grades[0] = sum(grades[0]) / 5
+grades[1] = sum(grades[1]) / 4
+grades[2] = sum(grades[2]) / 4
+grades[3] = sum(grades[3]) / 3
+grades[4] = sum(grades[4]) / 5
+students = list(students)
+students.append(grades[0])
+students.append(grades[1])
+students.append(grades[2])
+students.append(grades[3])
+students.append(grades[4])
+my_dict = dict(students)
+print(my_dict)
