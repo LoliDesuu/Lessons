@@ -1,18 +1,10 @@
-#Список:
-grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
-#Множество:
-students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
+first = int(input("Введите число: "))
+second = int(input("Введите число: "))
+third = int(input("Введите число: "))
 
-grades[0] = sum(grades[0]) / 5
-grades[1] = sum(grades[1]) / 4
-grades[2] = sum(grades[2]) / 4
-grades[3] = sum(grades[3]) / 3
-grades[4] = sum(grades[4]) / 5
-students = list(students)
-students.append(grades[0])
-students.append(grades[1])
-students.append(grades[2])
-students.append(grades[3])
-students.append(grades[4])
-my_dict = dict(students)
-print(my_dict)
+if (first == second == third):
+    print(3)
+elif (first == second or second == third or first == third):
+    print(2)
+else:
+    print(0)
