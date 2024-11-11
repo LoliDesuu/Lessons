@@ -1,13 +1,10 @@
-#1st program
-print(9 ** 0.5 * 5)
+first = int(input("Введите число: "))
+second = int(input("Введите число: "))
+third = int(input("Введите число: "))
 
-#2st program
-print(9.99 > 9.98 and 1000.1 != 1000)
-
-#3st program
-print(2 * 2 + 2)
-print(2 * (2 + 2))
-print(2 * 2 + 2 == 2 * (2 + 2))
-
-#4st program
-print(int((float('123.456')) * 10) % 10)
+if (first == second == third):
+    print(3)
+elif (first == second or second == third or first == third):
+    print(2)
+else:
+    print(0)
