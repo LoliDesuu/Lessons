@@ -13,7 +13,6 @@ def count_calls():
 # строку в нижнем регистре.
 
 def string_info(string):
-    global calls
     count_calls()
     len_string = len(string)
     my_tuple = (len_string, string.upper(), string.lower())
@@ -24,7 +23,6 @@ def string_info(string):
 # False - если отсутствует. Регистром строки при проверке пренебречь: UrbaN ~ URBAN.
 
 def is_contains(string, list):
-    global calls
     count_calls()
     for elem in list:
         string = string.lower()
