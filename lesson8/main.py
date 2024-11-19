@@ -5,15 +5,15 @@ def send_email(message="String", recipient="String", *, sender="university.help@
     if (recipient == sender):
         print(f"Нельзя отправить письмо самому себе!")
 
-    for elem in recipient:
-        if elem == "@":
+    for char in recipient:
+        if char == "@":
             is_recipient_true = False
             if (recipient[recipient.rindex('.'):] == ".com" or recipient[recipient.rindex('.'):] == ".ru" or
                     recipient[recipient.rindex('.'):] == ".net"):
                 is_recipient_true = True
 
-    for elem in sender:
-        if elem == "@":
+    for char in sender:
+        if char == "@":
             is_sender_true = False
             if (sender[sender.rindex('.'):] == ".com" or sender[sender.rindex('.'):] == ".ru" or
                     sender[sender.rindex('.'):] == ".net"):
