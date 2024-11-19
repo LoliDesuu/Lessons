@@ -4,8 +4,7 @@
 def send_email(message = "String", recipient = "String", *,  sender = "university.help@gmail.com"):
     for elem in recipient:
         if elem == "@":
-            _index = recipient.index('@')
-            print(recipient[_index:])
+            print(recipient[recipient.index('@'):recipient.index('.'):])
 
 
-send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+send_email('Это сообщение для проверки связи', 'urban.teacher@mail.ru')

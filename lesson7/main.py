@@ -14,9 +14,7 @@ def count_calls():
 
 def string_info(string):
     count_calls()
-    len_string = len(string)
-    my_tuple = (len_string, string.upper(), string.lower())
-    return my_tuple
+    return (len(string), string.upper(), string.lower())
 
 
 # Функция is_contains принимает два аргумента: строку и список, и возвращает True, если строка находится в этом списке,
@@ -25,12 +23,9 @@ def string_info(string):
 def is_contains(string, list):
     count_calls()
     for elem in list:
-        string = string.lower()
-        elem = elem.lower()
-        is_equals = False
-        if string == elem:
-            is_equals = True
-    return is_equals
+        elem.lower() == string
+        return True
+    return False
 
 
 # Проверки:
