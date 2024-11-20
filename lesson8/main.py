@@ -1,32 +1,16 @@
 # Создайте функцию send_email, которая принимает 2 обычных аргумента: message(сообщение), (получатель)
 # и 1 обязательно именованный аргумент со значением по умолчанию sender = "university.help@gmail.com".
 
-def send_email(message="String", recipient="String", *, sender="university.help@gmail.com"):
-    if (recipient == sender):
+def send_email(message:str, recipient:str, *, sender="university.help@gmail.com"):
+
+    if "@" not in recipient or "@" not in sender or not recipient.endswith((".com", ".ru", ".net")) or not sender.endswith((".com", ".ru", ".net")):
+        print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
+    elif sender == "university.help@gmail.com":
+        print(f"Письмо успешно отправлено с адреса {sender} на адрес {recipient}.")
+    elif recipient == sender:
         print(f"Нельзя отправить письмо самому себе!")
-
-    for char in recipient:
-        if char == "@":
-            is_recipient_true = False
-            if (recipient[recipient.rindex('.'):] == ".com" or recipient[recipient.rindex('.'):] == ".ru" or
-                    recipient[recipient.rindex('.'):] == ".net"):
-                is_recipient_true = True
-
-    for char in sender:
-        if char == "@":
-            is_sender_true = False
-            if (sender[sender.rindex('.'):] == ".com" or sender[sender.rindex('.'):] == ".ru" or
-                    sender[sender.rindex('.'):] == ".net"):
-                is_sender_true = True
-
-    if (is_recipient_true == True) and (is_sender_true == True):
-        if (sender == "university.help@gmail.com"):
-            print(f"Письмо успешно отправлено с адреса {sender} на адрес {recipient}.")
-        else:
-            if (recipient != sender):
-                print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}.")
-    else:
-        print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}.")
+    elif sender != "university.help@gmail.com":
+        print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}.")
 
 
 # Проверки
