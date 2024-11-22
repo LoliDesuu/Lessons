@@ -6,6 +6,7 @@ def get_multiplied_digits(number):
     else:
         return first
 
+
 print(get_multiplied_digits(2314))
 print(get_multiplied_digits(40203))
 print(get_multiplied_digits(32514))
