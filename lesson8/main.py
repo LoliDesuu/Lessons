@@ -1,7 +1,7 @@
 # Создайте функцию send_email, которая принимает 2 обычных аргумента: message(сообщение), (получатель)
 # и 1 обязательно именованный аргумент со значением по умолчанию sender = "university.help@gmail.com".
 
-def send_email(message:str, recipient:str, *, sender="university.help@gmail.com"):
+def send_email(message, recipient, *, sender="university.help@gmail.com"):
 
     if "@" not in recipient or "@" not in sender \
            or not recipient.endswith((".com", ".ru", ".net")) \
