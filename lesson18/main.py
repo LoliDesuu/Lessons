@@ -1,5 +1,3 @@
-from setuptools.extern import names
-
 
 class House():
     houses_history = []
