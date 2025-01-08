@@ -15,6 +15,7 @@ def custom_write(file_name, string):
             keys.append(key)
             file_pos += len(line)
         file.close()
+    keys = tuple(keys)
     string_position = dict(zip(keys, info))
     return string_position
 
