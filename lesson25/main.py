@@ -3,7 +3,6 @@ def custom_write(file_name, string):
     with open(file_name, 'w', encoding='utf-8') as file:
         for elem in string:
             file.write(f'{elem}\n')
-        file.close()
     keys = ()
     keys = list(keys)
     lines = 0
@@ -14,7 +13,6 @@ def custom_write(file_name, string):
             key = lines, file_pos
             keys.append(key)
             file_pos += len(line)
-        file.close()
     keys = tuple(keys)
     string_position = dict(zip(keys, info))
     return string_position
